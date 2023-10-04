@@ -48,7 +48,7 @@ const authenticateJwt = (req, res, next) => {
         res.sendStatus(401);
     }
 };
-mongoose.connect('',{ useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" }); //Put your own MongoDB conncetion string
+mongoose.connect('',{ useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" }); //Put your MongoDB conncetion string
 
 app.get('/admin/me', authenticateJwt,(req,res)=>{
     res.json({
